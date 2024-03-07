@@ -10,6 +10,9 @@ const generateNewShortUrl = async (req,  res) => {
             id : "Url required"
         })
         const shortID = shortid()
+        const data = await  Url.findOne({redirectUrl : url})
+        
+        if(data) return res.redirect('/')
         await Url.create({
             shortId:shortID,
             redirectUrl:url,

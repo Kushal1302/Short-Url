@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Short-Url</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            text-align: center;
+        }
+        table{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        th{
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>Url Shortener</h1>
@@ -16,7 +38,7 @@
            <p> http://localhost:8000/url/<%=id%></p>
         <% } %>
 
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th>Sr No</th>

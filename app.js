@@ -2,12 +2,13 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const cors = require('cors')
+require('dotenv').config()
 app.use(cors())
 const router = require('./routes/url.js')
 const connectToMongoDB = require('./connect.js')
 const staticRouter = require('./routes/StaticRouter.js')
-const userRouter = require('./routes/user')
-
+const userRouter = require('./routes/user.js')
+const PORT = process.env.PORT || 3000
 // file parser = urlencoded
 //json parser = express.json()
 app.use(express.json())
